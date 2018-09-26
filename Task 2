@@ -6,11 +6,11 @@ public class Task2 {
 
         Scanner scanner = new Scanner(System.in);
         
-        int numbers = -21;
+        int numbers = -20;
 
         for (int i = 0; i <=70 ; i++) {
-            numbers++;
             System.out.println(numbers);
+            numbers++;
             
         }
     }
