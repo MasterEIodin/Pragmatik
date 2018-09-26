@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Task5 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        double a = scanner.nextDouble();
+        double b = scanner.nextDouble();
+        double c = scanner.nextDouble();
+
+        double max = 0;
+        double min = 0;
+        double mid = 0;
+
+        if (a > b && a > c ) {
+            max = a;
+            if (b > c) {
+                min = c;
+                mid = b;
+            }else {
+                min = b;
+                mid = c;
+            }
+        }else if (b > a && b > c) {
+            max = b;
+            if (a > c) {
+                mid = a;
+                min = c;
+            }else {
+                min = a;
+                mid = c;
+            }
+        }else if (c > a && c > b) {
+            max = c;
+            if (a > b) {
+                mid = a;
+                min = b;
+            }else {
+                min = a;
+                mid = b;
+            }
+        }
+        System.out.println(max + " " + mid + " " + min);
+    }
+}
