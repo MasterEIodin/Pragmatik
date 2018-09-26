@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Task2 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        
+        int numbers = -21;
+
+        for (int i = 0; i <=70 ; i++) {
+            numbers++;
+            System.out.println(numbers);
+            
+        }
+    }
+}
