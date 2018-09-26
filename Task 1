@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Task1 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please, enter number A:");
+        double a = scanner.nextDouble();
+        System.out.println("Please, enter number B:");
+        double b = scanner.nextDouble();
+        System.out.println("Please, enter number C:");
+        double c = scanner.nextDouble();
+
+        if (c < b && c > a) {
+            System.out.println("Number C is between A and B");
+        }else {
+            System.out.println("Number C isn't between A and B");
+        }
+    }
+}
