@@ -7,15 +7,16 @@ public class Task7 {
         Scanner scanner = new Scanner(System.in);
 
         int n = scanner.nextInt();
+        int counter = 1;
+        int number = 0;
 
-        for (int i = 3; i <= n; i++) {
-
-            if (i % 3 == 0) {
-                System.out.println(i);
+        while (counter <= n) {
+            number++;
+            if (number %3 == 0) {
+                System.out.println(number);
+                counter++;
             }
         }
-
     }
-
 }
 
