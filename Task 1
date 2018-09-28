@@ -13,7 +13,7 @@ public class Task1 {
         System.out.println("Please, enter number C:");
         double c = scanner.nextDouble();
 
-        if (c < b && c > a) {
+        if ((c < b && c > a) || (c < a && c > b)) {
             System.out.println("Number C is between A and B");
         }else {
             System.out.println("Number C isn't between A and B");
