@@ -10,7 +10,7 @@ public class Task2 {
         double number2 = scanner.nextDouble();
 
         double sum = number1 + number2;
-        double diff = Math.abs(number1 - number2);
+        double diff = number1 - number2;
         double product = number1*number2;
         double quotient = number1/number2;
         double quotient2 = number2/number1;
