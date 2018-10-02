@@ -1,0 +1,44 @@
+public class ComputerDemo {
+
+    public static void main(String[] args) {
+
+        Computer pc1 = new Computer();
+        pc1.year = 2018;
+        pc1.price = 500.00;
+        pc1.isNoteBook = false;
+        pc1.hardDiskMemory = 1000;
+        pc1.freeMemory = 768;
+        pc1.operationSystem = "Windows 8";
+
+        pc1.changeOperationSystem("Windows 10");
+
+        Computer pc2 = new Computer();
+        pc2.year = 2016;
+        pc2.price = 300.00;
+        pc2.isNoteBook = true;
+        pc2.hardDiskMemory = 500;
+        pc2.freeMemory = 248;
+        pc2.operationSystem = "Windows 7";
+
+        pc2.useMemory(100);
+
+        System.out.println("These are the parameters for the first computer:");
+        System.out.println(pc1.year);
+        System.out.println(pc1.price);
+        System.out.println(pc1.isNoteBook);
+        System.out.println(pc1.hardDiskMemory);
+        System.out.println(pc1.freeMemory);
+        System.out.println(pc1.operationSystem);
+
+        System.out.println();
+        System.out.println("These are the parameters for the 2nd computer:");
+        System.out.println(pc2.year);
+        System.out.println(pc2.price);
+        System.out.println(pc2.isNoteBook);
+        System.out.println(pc2.hardDiskMemory);
+        System.out.println(pc2.freeMemory);
+        System.out.println(pc2.operationSystem);
+
+
+    }
+}
