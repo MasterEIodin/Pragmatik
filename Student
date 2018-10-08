@@ -1,0 +1,52 @@
+public class Student {
+
+    String name;
+    String subject;
+    double grade;
+    int yearInCollege;
+    int age;
+    boolean isDegree;
+    double money;
+
+    public Student() {
+        this.grade = 4.0;
+        this.yearInCollege = 1;
+        this.isDegree = false;
+        this.money = 0;
+    }
+
+    public Student(String name, String subject, int age) {
+        this();
+        this.name = name;
+        this.subject = subject;
+        this.age = age;
+    }
+
+    void upYear() {
+
+        if (yearInCollege < 4) {
+            yearInCollege++;
+            System.out.printf("This student is in %d year%n", yearInCollege);
+            if (yearInCollege == 4) {
+                System.out.println("This student now has a degree!");
+                isDegree = true;
+            }
+        } else {
+            System.out.println("This student now has a degree");
+            isDegree = true;
+        }
+    }
+
+    double receiveScholarship(double min, double amount) {
+        if (min > this.grade) {
+            System.out.println("This student does not get a scholarship");
+            return this.money;
+        } else {
+            this.money += amount;
+            System.out.printf("This student received a scholarship of %.2f. He now has %.2f%n", amount, money);
+            return this.money;
+        }
+    }
+}
+
+
