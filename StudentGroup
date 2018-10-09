@@ -1,0 +1,63 @@
+import java.util.Arrays;
+
+public class StudentGroup {
+
+    String groupSubject;
+    int freePlaces;
+    Student[] students;
+
+
+    public StudentGroup() {
+        this.freePlaces = 5;
+        this.students = new Student[freePlaces];
+    }
+
+    public StudentGroup(String subject) {
+        this();
+        this.groupSubject = subject;
+    }
+
+    void addStudent(Student s) {
+
+        if (s.subject.equalsIgnoreCase(groupSubject) && freePlaces > 0) {
+            this.students[this.students.length - freePlaces] = s;
+            freePlaces--;
+        }
+    }
+
+    void printStudentsInGroup() {
+        for (int i = 0; i < this.students.length - freePlaces; i++) {
+            System.out.print("Name: " + this.students[i].name + ", ");
+            System.out.print("Subject: " + this.students[i].subject + ", ");
+            System.out.print("Year in college: " + this.students[i].yearInCollege + ", ");
+            System.out.print("Grade: " + this.students[i].grade + ", ");
+            System.out.print("Age: " + this.students[i].age + ", ");
+            System.out.print("Money: " + this.students[i].money + ", ");
+            System.out.println("Degree: " + this.students[i].isDegree + ".");
+        }
+    }
+
+    void emptyGroup() {
+        Arrays.fill(students, null);
+        freePlaces = 5;
+        System.out.println("Array is empty");
+    }
+
+    String theBestStudent() {
+        double maxGrade = 2;
+        String toPrint = "";
+        for (int i = 0; i < students.length - freePlaces; i++) {
+            if (students[i].grade > maxGrade) {
+                maxGrade = students[i].grade;
+                toPrint = students[i].name;
+            }
+        }
+        System.out.println(toPrint);
+        return toPrint;
+    }
+
+}
+
+
+
+
