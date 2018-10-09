@@ -1,0 +1,65 @@
+import java.util.Arrays;
+
+public class College {
+
+    public static void main(String[] args) {
+    
+        Student Georgi = new Student("Georgi Tsolov", "Maths", 24);
+        Georgi.grade = 4.70;
+        Student Petar = new Student("Petar Petrov", "Maths", 42);
+        Petar.grade = 3.60;
+        Student Dimitar = new Student("Dimitar Dimitrov", "Maths", 31);
+        Dimitar.grade = 5.20;
+        Student Yuriy = new Student("Yuriy Kinov", "Literature", 44);
+        Yuriy.grade = 4.60;
+        Student Maria = new Student("Maria Petkova", "Maths", 33);
+        Maria.grade = 5.71;
+        Student Lili = new Student("Lili Halembakova", "Maths", 34);
+        Lili.grade = 5.34;
+        Student Lyubomira = new Student("Lyubomira Atanasova", "PR", 31);
+        Lyubomira.grade = 5.80;
+        Student Nikolay = new Student("Nikolay Kandev", "Maths", 33);
+        Nikolay.grade = 3.80;
+        Student Ivelin = new Student("Ivelin Yovchev", "Maths", 32);
+
+        Ivelin.receiveScholarship(4, 800);
+        Georgi.receiveScholarship(4, 250);
+
+        Lili.upYear();
+        Maria.upYear();
+        Maria.upYear();
+        Maria.upYear();
+        Maria.upYear();
+
+    StudentGroup maths = new StudentGroup("Maths");
+
+        maths.addStudent(Georgi);
+        maths.addStudent(Petar);
+        maths.addStudent(Dimitar);
+        maths.addStudent(Yuriy);
+        maths.addStudent(Maria);
+        maths.addStudent(Lili);
+        maths.addStudent(Lyubomira);
+        maths.addStudent(Nikolay);
+        maths.addStudent(Ivelin);
+
+
+        maths.printStudentsInGroup();
+        maths.theBestStudent();
+
+        StudentGroup literature = new StudentGroup("Literature");
+        literature.addStudent(Georgi);
+        literature.addStudent(Petar);
+        literature.addStudent(Dimitar);
+        literature.addStudent(Yuriy);
+        literature.addStudent(Maria);
+        literature.addStudent(Lili);
+        literature.addStudent(Lyubomira);
+        literature.addStudent(Nikolay);
+        literature.addStudent(Ivelin);
+
+        literature.printStudentsInGroup();
+        literature.theBestStudent();
+
+    }
+}

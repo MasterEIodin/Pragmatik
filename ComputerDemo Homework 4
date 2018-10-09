@@ -1,0 +1,17 @@
+public class ComputerDemo {
+
+    public static void main(String[] args) {
+
+        Computer pc1 = new Computer(2016, 1000, false, 1000, 1000, "Windows 7");
+        Computer pc2 = new Computer(2018, 1500, 500, 500);
+        Computer pc3 = new Computer(2017, 2100, 1000, 1000);
+        Computer pc4 = new Computer(2015, 1000, 500, 500);
+
+
+        pc1.comparePrice(pc2);
+        pc3.comparePrice(pc1);
+        pc4.comparePrice(pc1);
+    }
+}
+
+
