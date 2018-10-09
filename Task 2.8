@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Task8 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int number = scanner.nextInt();
+        int toPrint = number;
+
+        for (int i = 0; i < number; i++) {
+
+            if (i == 0) {
+                toPrint -= 1;
+                
+                for (int a = 0; a < number; a++) {
+                    System.out.print(toPrint);
+                }
+
+            } else {
+                toPrint += 2;
+                System.out.println("");
+
+                for (int b = 0; b < number; b++) {
+                    System.out.print(toPrint);
+                }
+            }
+        }
+    }
+}
