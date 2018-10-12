@@ -1,0 +1,31 @@
+public class Employee extends Person {
+
+    double daySalary;
+
+    public Employee(String name, int age, boolean isMan, double daySalary) {
+        super(name, age, isMan);
+        this.daySalary = daySalary;
+    }
+
+    @Override
+    void showPersonInfo() {
+        super.showPersonInfo();
+        System.out.printf("This employee earns %.2f per day%n", this.daySalary);
+    }
+
+    @Override
+    double calculateOvertime(double hours) {
+        double amountOwed;
+        if (this.age < 18) {
+            System.out.printf("This employee will receive %.2f at the end of the day%n", (daySalary));
+            return 0;
+        } else {
+            amountOwed = (daySalary / 8) * (hours * 1.5);
+            System.out.printf("This employee will receive %.2f at the end of the day%n", (daySalary + amountOwed));
+            return amountOwed;
+        }
+    }
+}
+
+
+
