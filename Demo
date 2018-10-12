@@ -1,0 +1,44 @@
+import java.util.Arrays;
+import java.util.Objects;
+
+public class Demo {
+
+    public static void main(String[] args) {
+        Person Dimitar = new Person("Dimitar Dimitrov", 31, true);
+        Person Antoaneta = new Person("Antoaneta Dimitrova", 24, false);
+        Student Valentin = new Student("Valentin Iliev", 16, true, 4.80);
+        Student Petya = new Student("Petya Dobreva", 17, false, 5.84);
+        Employee Georgi = new Employee("Georgi Minchev", 17, true, 90);
+        Employee Vasilka = new Employee("Vasilka Tomanova", 30, false, 120);
+
+        Person[] persons = new Person[10];
+        persons[0] = Dimitar;
+        persons[1] = Antoaneta;
+        persons[2] = Valentin;
+        persons[3] = Petya;
+        persons[4] = Georgi;
+        persons[5] = Vasilka;
+
+
+        for (int i = 0; i <persons.length ; i++) {
+            if (persons[i] != null) {
+                if (persons[i] instanceof Student) {
+                    persons[i].showPersonInfo();
+                }else if (persons[i] instanceof Employee) {
+                    persons[i].showPersonInfo();
+                }else {
+                    persons[i].showPersonInfo();
+                }
+            }
+        }
+
+        for (int i = 0; i <persons.length ; i++) {
+            if (persons[i] != null) {
+                if(persons[i] instanceof Employee) {
+                    persons[i].calculateOvertime(2);
+                }
+            }
+        }
+    }
+}
+
