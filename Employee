@@ -6,9 +6,8 @@ public class Employee extends Person {
         super(name, age, isMan);
         this.daySalary = daySalary;
     }
-
-    @Override
-    void showPersonInfo() {
+    
+    void showEmployeeInfo() {
         super.showPersonInfo();
         System.out.printf("This employee earns %.2f per day%n", this.daySalary);
     }
