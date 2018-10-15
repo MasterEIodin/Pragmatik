@@ -1,0 +1,28 @@
+public class Employee extends Person {
+
+    double daySalary;
+
+    public Employee(String name, int age, boolean isMan, double daySalary) {
+        super(name, age, isMan);
+        this.daySalary = daySalary;
+    }
+
+
+    public void showEmployeeInfo() {
+        super.showPersonInfo();
+        System.out.printf("This employee earns %.2f per day%n", this.daySalary);
+    }
+
+
+    double calculateOvertime(double hours) {
+                double amountOwed;
+                if (this.age < 18) {
+                    System.out.println("This person is underage, hence not qualified for overtime pay.");
+                    return 0;
+        } else {
+            amountOwed = (daySalary / 8) * (hours * 1.5);
+            System.out.printf("This employee will receive %.2f for %.2f hours of extra work%n", amountOwed, hours);
+            return amountOwed;
+        }
+    }
+}

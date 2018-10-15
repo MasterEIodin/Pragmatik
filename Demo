@@ -1,0 +1,40 @@
+
+public class Demo {
+    public static void main(String[] args) throws NoSuchMethodException {
+        Person p1 = new Person("Dimitar Dimitrov", 31, true);
+        Person p2 = new Person("Antoaneta Dimitrova", 24, false);
+        Student s1 = new Student("Valentin Iliev", 16, true, 4.80);
+        Student s2 = new Student("Petya Dobreva", 17, false, 5.84);
+        Employee e1 = new Employee("Georgi Minchev", 17, true, 90);
+        Employee e2 = new Employee("Vasilka Tomanova", 30, false, 120);
+        
+        Person[] persons = new Person[10];
+        persons[0] = p1;
+        persons[1] = p2;
+        persons[2] = s1;
+        persons[3] = s2;
+        persons[4] = e1;
+        persons[5] = e2;
+
+        for (Person p : persons) {
+            if (p == null) {
+                break;
+            }else {
+                if (p instanceof Student) {
+                    ((Student) p).showStudentInfo();
+                }else if (p instanceof Employee) {
+                    ((Employee) p).showEmployeeInfo();
+                }else {
+                    p.showPersonInfo();
+                }
+            }
+        }
+
+        for (Person e : persons) {
+            if (e instanceof Employee) {
+                ((Employee) e).calculateOvertime(2);
+            }
+        }
+        
+    }
+}
