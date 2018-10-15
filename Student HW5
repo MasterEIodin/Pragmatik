@@ -1,17 +1,12 @@
 public class Student extends Person {
-
     double score;
-
     public Student(String name, int age, boolean isMan, double score) {
         super(name, age, isMan);
         this.score = score;
     }
 
-    @Override
-    void showPersonInfo() {
+    public void showStudentInfo() {
         super.showPersonInfo();
         System.out.printf("The student's score is %.2f%n", this.score);
     }
-
 }
-
