@@ -1,21 +1,14 @@
 public class Person {
-
     String name;
     int age;
     boolean isMan;
-
     public Person(String name, int age, boolean isMan) {
         this.name = name;
         this.age = age;
         this.isMan = isMan;
     }
 
-    double calculateOvertime(double hours) {
-      return 0;
-    }
-
     void showPersonInfo() {
-
         System.out.println("This person is called " +this.name);
         if (this.isMan) {
             System.out.println("The person is male.");
